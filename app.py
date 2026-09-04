@@ -31,9 +31,9 @@ def index():
         
         download_dir = '/tmp'
         ydl_opts = {
-            'format': '18',  # RAM bachane ke liye format 18 (360p) set kiya hai taaki server crash na ho
+            'format': '18',
             'outtmpl': os.path.join(download_dir, 'downloaded_video.%(ext)s'),
-            'extractor_args': {'youtube': {'player_client': ['android']}},
+            'extractor_args': {'youtube': {'player_client': ['android', 'ios', 'web']}},
         }
         
         try:
@@ -49,3 +49,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+    
