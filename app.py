@@ -32,8 +32,9 @@ def index():
         download_dir = '/tmp'
         ydl_opts = {
             'format': '18',
-            'outtmpl': os.path.join(download_dir, 'downloaded_video.%(ext)s'),
+            'outtmpl': os.path.join(download_dir, 'video.%(ext)s'),
             'extractor_args': {'youtube': {'player_client': ['android', 'ios', 'web']}},
+            'cachedir': False,
         }
         
         try:
@@ -49,4 +50,3 @@ def index():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
-    
