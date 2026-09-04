@@ -31,7 +31,7 @@ def index():
         
         download_dir = '/tmp'
         ydl_opts = {
-            'format': 'best[height<=360]/best',
+            'format': '18',  # RAM bachane ke liye format 18 (360p) set kiya hai taaki server crash na ho
             'outtmpl': os.path.join(download_dir, 'downloaded_video.%(ext)s'),
             'extractor_args': {'youtube': {'player_client': ['android']}},
         }
