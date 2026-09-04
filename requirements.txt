@@ -1,3 +1,4 @@
 flask
-yt-dlp
 gunicorn
+https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz
+
